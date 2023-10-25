@@ -11,12 +11,14 @@ function changeColorBasedOnDate(element, dateStr, key) {
     if (key === 'CFRdo') {
         if (diffDays <= 14 && inputDate >= currentDate) {
             element.style.backgroundColor = '#e977be';
+            element.style.color = "white";
         } else if (inputDate < currentDate) {
             element.style.backgroundColor = '#db2e74';
         }
     } else if (key === 'A1do') {
         if (diffDays <= 14 && inputDate >= currentDate) {
             element.style.backgroundColor = '#b4a7d6';
+            element.style.color = "white";
         } else if (inputDate < currentDate) {
             element.style.backgroundColor = '#674ea7';
         }
@@ -41,4 +43,3 @@ const observer = new MutationObserver((mutations) => {
 
 // Start observing the document with the configured parameters
 observer.observe(document.body, { childList: true, subtree: true });
-console.log("Loaded");
